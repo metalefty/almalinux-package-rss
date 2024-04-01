@@ -1,12 +1,8 @@
 #!/bin/bash
 
-source /etc/os-release
-
-
 REPOS=$(dnf repolist --enablerepo=\* | grep AlmaLinux | grep Source | awk '{print $1}')
 
 dnf --refresh --enablerepo=\*-source --disablerepo=docker\* check-update
-
 
 for r in $REPOS
 do
