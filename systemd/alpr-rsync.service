@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=onehsot
 # Edit this to use
-#ExecStart=/usr/bin/rsync -a /home/almalinux/feeds/ alma.acidman.thelefty.org:/tank0/feeds
+#ExecStart=/usr/bin/rsync -a /home/almalinux/almalinux-package-rss/feeds/ alma.acidman.thelefty.org:/tank0/feeds
 
 [Install]
 WantedBy=default.target
