@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync feeds every 20 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitInactiveSec=1140
+
+[Install]
+WantedBy=timers.target
