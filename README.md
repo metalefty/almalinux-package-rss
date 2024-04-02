@@ -8,6 +8,6 @@ docker build -t alpr/9 --build-arg RELVER=9 github.com/metalefty/almalinux-packa
 ## Run
 
 ```sh
-docker run --rm -it -v ./output:/app/output alpr/9
-docker run --rm -it -v ./output:/app/output alpr/8
+docker run --rm -it -v ./feeds:/app/output alpr/9
+docker run --rm -it -v ./feeds:/app/output alpr/8
 ```
