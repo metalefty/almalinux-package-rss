@@ -11,7 +11,7 @@ do
 		--filename "output/${ID}-${VERSION_ID%.*}-$r.rss" \
 	 	--link ${HOME_URL} \
 		--days 30 \
-		--title "Most recent updated packages in ${NAME} ${VERSION_ID%.*} ${r}" \
-		--description "Most recent updated packages in ${NAME} ${VERSION_ID%.*} ${r}" \
+		--title "${NAME} ${VERSION_ID%.*} ${r} recent packages" \
+		--description "${NAME} ${VERSION_ID%.*} ${r} recent packages" \
 		"${r}"
 done
