@@ -1,11 +1,12 @@
 [Unit]
-Descryption=Put rss feeds on mirror
+Description=Put rss feeds on mirror
 After=network.target
+Wants=alpr-rss-merge.service
 
 [Service]
-Type=onehsot
+Type=oneshot
 # Edit this to use
-#ExecStart=/usr/bin/rsync -a /home/almalinux/almalinux-package-rss/feeds/ alma.acidman.thelefty.org:/tank0/feeds
+ExecStart=/usr/bin/rsync -a /home/almalinux/almalinux-package-rss/feeds/ alma.acidman.thelefty.org:/tank0/almalinux-feeds
 
 [Install]
 WantedBy=default.target
