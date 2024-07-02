@@ -1,0 +1,13 @@
+ARG RELVER=9
+FROM almalinux:${RELVER}
+
+WORKDIR /app
+RUN mkdir output
+RUN dnf -y update && dnf -y install python3 ruby rubygem-rss rubygem-rexml
+
+VOLUME /app/output
+
+COPY entrypoint-rss-merge.sh /app/entrypoint.sh
+COPY rss-merge.rb /app
+
+ENTRYPOINT ["./entrypoint.sh"]
