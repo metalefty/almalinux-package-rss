@@ -8,7 +8,7 @@ for r in $REPOS
 do
 	source /etc/os-release
 	 ./rss.py \
-		--filename "output/${ID}-${VERSION_ID%.*}-$r.rss" \
+		--filename "output/${ID}-${VERSION_ID%.*}-${r#almalinux-}.rss" \
 		--link ${HOME_URL} \
 		--days 30 \
 		--title "${NAME} ${VERSION_ID%.*} recent packages (${r})" \
