@@ -9,9 +9,9 @@ do
 	source /etc/os-release
 	 ./rss.py \
 		--filename "output/${ID}-${VERSION_ID%.*}-$r.rss" \
-	 	--link ${HOME_URL} \
+		--link ${HOME_URL} \
 		--days 30 \
-		--title "${NAME} ${VERSION_ID%.*} ${r} recent packages" \
-		--description "${NAME} ${VERSION_ID%.*} ${r} recent packages" \
+		--title "${NAME} ${VERSION_ID%.*} recent packages (${r})" \
+		--description "${NAME} ${VERSION_ID%.*} recent packages (${r})" \
 		"${r}"
 done
