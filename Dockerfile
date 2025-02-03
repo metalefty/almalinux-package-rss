@@ -1,5 +1,5 @@
 ARG RELVER=9
-FROM almalinux:${RELVER}
+FROM quay.io/almalinuxorg/almalinux:${RELVER}
 
 WORKDIR /app
 RUN mkdir output
