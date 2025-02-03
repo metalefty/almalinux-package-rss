@@ -19,9 +19,17 @@ daemon-reload:
 
 enable: install 
 	systemctl --user enable alpr-rsync.timer alpr-rss-merge.service
-	systemctl --user enable alpr-generate@8.timer alpr-generate@9.timer
+	systemctl --user enable \
+		alpr-generate@8.timer \
+		alpr-generate@9.timer \
+		alpr-generate@10-kitten.timer
 
 disable:
-	systemctl --user disable alpr-rsync.timer alpr-rss-merge.service alpr-generate@8.timer alpr-generate@9.timer
+	systemctl --user disable \
+		alpr-rsync.timer 
+		alpr-rss-merge.service \
+		alpr-generate@8.timer \
+		alpr-generate@9.timer  \
+		alpr-generate@10-kitten.timer 
 
 all: install enable
