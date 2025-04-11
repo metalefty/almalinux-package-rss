@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=docker run --rm -v /home/almalinux/almalinux-package-rss/feeds:/app/output alpr-rss-merge
+ExecStart=podman run --rm -v /home/almalinux/almalinux-package-rss/feeds:/app/output:Z alpr-rss-merge
 
 [Install]
 WantedBy=default.target
