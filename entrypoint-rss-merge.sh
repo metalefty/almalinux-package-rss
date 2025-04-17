@@ -3,6 +3,9 @@
 RELVERS="9 8"
 KITTEN_VERS="10"
 
+{
+flock 9
+
 for v in $RELVERS
 do
 	./rss-merge.rb \
@@ -22,3 +25,5 @@ do
 		-- $(find output -type f -name almalinux-kitten-${v}-\*.rss -regextype egrep -not -regex '.*everything.*') \
 		> output/almalinux-kitten-${v}-everything-source.rss
 done
+
+} 9>.lockfile
