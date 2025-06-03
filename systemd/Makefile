@@ -22,6 +22,7 @@ enable: install
 	systemctl --user enable \
 		alpr-generate@8.timer \
 		alpr-generate@9.timer \
+		alpr-generate@10.timer \
 		alpr-generate@10-kitten.timer
 
 disable:
@@ -30,6 +31,7 @@ disable:
 		alpr-rss-merge.service \
 		alpr-generate@8.timer \
 		alpr-generate@9.timer  \
+		alpr-generate@10.timer  \
 		alpr-generate@10-kitten.timer 
 
 all: install enable

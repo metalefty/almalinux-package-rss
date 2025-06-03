@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RELVERS="9 8"
+RELVERS="9 8 10"
 KITTEN_VERS="10"
 
 {
