@@ -26,4 +26,4 @@ do
 		> output/almalinux-kitten-${v}-everything-source.rss
 done
 
-} 9>.lockfile
+} 9>output/.lockfile
